@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.holocons.mc.nounsecuretoast.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "verbose": true,
+  "client": [
+    "ToastComponentMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,41 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "nochatreports",
+  "id": "nounsecuretoast",
   "version": "${version}",
-
-  "name": "No Chat Reports",
-  "description": "Strips cryptographic signatures from player messages, making it impossible to track and associate them with your Mojang/Microsoft account, as well as use Player Chat Reporting feature.",
+  "name": "No Unsecure Toast",
+  "description": "Disables the warning toast about chat messages being unverified",
   "authors": [
-    "Aizistral"
+    "dlee13"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/no-chat-reports",
-    "sources": "https://github.com/Aizistral-Studios/No-Chat-Reports",
-    "issues": "https://github.com/Aizistral-Studios/No-Chat-Reports/issues"
+    "homepage": "https://holocons.xyz",
+    "sources": "https://github.com/dlee13/No-Unsecure-Toast"
   },
-
   "license": "WTFPL",
-  "icon": "NCR_logo.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.aizistral.nochatreports.NoChatReports"
-    ],
-	"client": [
-      "com.aizistral.nochatreports.NoChatReportsClient"
-    ]
-  },
+  "icon": "assets/nounsecuretoast/NCR_logo.png",
+  "environment": "client",
   "mixins": [
-    "nochatreports.mixins.json"
+    "nounsecuretoast.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": "=1.19.1",
+    "fabricloader": ">=0.14.8",
+    "minecraft": ">=1.19.1",
     "java": ">=17"
   },
-  "suggests": {},
-  "accessWidener" : "nochatreports.accesswidener"
+  "breaks": {
+    "nochatreports": "*"
+  }
 }
